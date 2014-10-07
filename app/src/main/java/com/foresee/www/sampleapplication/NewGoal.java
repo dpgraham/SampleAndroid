@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 
 public class NewGoal extends Activity {
@@ -12,6 +15,12 @@ public class NewGoal extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_goal);
+
+        // Activate the spinner
+        Spinner spinner = (Spinner) findViewById(R.id.more_than_or_less_than);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.more_than_or_less_than, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 
 

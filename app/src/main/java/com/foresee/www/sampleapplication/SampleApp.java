@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
 
 
 public class SampleApp extends Activity {
@@ -24,13 +25,36 @@ public class SampleApp extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_create_goal:
+                openCreateGoal();
+                return true;
+            case R.id.action_settings:
+                openSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Open the goal creation activity
+     * @return
+     */
+    public boolean openCreateGoal(){
+        Intent intent = new Intent(this, NewGoal.class);
+        startActivity(intent);
+        return true;
+    }
+
+    /**
+     * Open the app settings
+     * @return
+     */
+    public boolean openSettings(){
+        return true;
+    }
+
+
 }
