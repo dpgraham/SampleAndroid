@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.content.Intent;
 
 
-public class SampleApp extends Activity {
+public class SampleAppActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
