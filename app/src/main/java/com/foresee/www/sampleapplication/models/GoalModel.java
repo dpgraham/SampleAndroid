@@ -33,6 +33,12 @@ public final class GoalModel extends Model {
         this.CreateTable();
     }
 
+    public GoalModel(Context application_context, ArrayList<Field> fields){
+        super(application_context, fields);
+        this.model_name = "GOALS";
+        this.CreateTable();
+    }
+
     /**
      *
      * @return
@@ -45,6 +51,7 @@ public final class GoalModel extends Model {
     public boolean Delete(){
         return false;
     }
+
 
     /**
      *
