@@ -1,12 +1,10 @@
 package com.foresee.www.sampleapplication.models;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.provider.BaseColumns;
 
 import java.util.ArrayList;
 
-public final class GoalModel extends Model {
+public final class LogGoalModel extends Model {
 
     public enum MoreOrLess {
         MORE_THAN,
@@ -16,7 +14,7 @@ public final class GoalModel extends Model {
     /**
      * Constructor.
      */
-    public GoalModel(Context application_context, String name, MoreOrLess more_or_less, float more_or_less_amount){
+    public LogGoalModel(Context application_context, String name, MoreOrLess more_or_less, float more_or_less_amount){
 
         // Call the super constructor
         super(application_context);
@@ -33,11 +31,11 @@ public final class GoalModel extends Model {
         this.CreateTable();
     }
 
-    public GoalModel(Context application_context){
+    public LogGoalModel(Context application_context){
         this(application_context, "", null, 0);
     }
 
-    public GoalModel(Context application_context, ArrayList<Field> fields){
+    public LogGoalModel(Context application_context, ArrayList<Field> fields){
         super(application_context);
         this.model_name = "GOALS";
         this.fields = fields;

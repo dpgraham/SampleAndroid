@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GoalForm"
+            android:name=".GoalNewActivity"
             android:label="@string/title_activity_new_goal" >
+        </activity>
+        <activity
+            android:name=".GoalShowActivity"
+            android:label="@string/title_activity_goal_show" >
         </activity>
     </application>
 

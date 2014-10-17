@@ -43,7 +43,7 @@ public class SampleAppActivity extends Activity {
      * @return
      */
     public boolean openCreateGoal(){
-        Intent intent = new Intent(this, GoalForm.class);
+        Intent intent = new Intent(this, GoalNewActivity.class);
         startActivity(intent);
         return true;
     }

@@ -7,9 +7,12 @@
     <string name="add_item">Add</string>
     <string name="title_activity_new_goal">New Goal</string>
     <string name="name_hint">Name</string>
+
     <string-array name="more_than_or_less_than">
         <item>More than</item>
         <item>Less than</item>
     </string-array>
+
+    <string name="title_activity_goal_show">GoalShowActivity</string>
 
 </resources>
